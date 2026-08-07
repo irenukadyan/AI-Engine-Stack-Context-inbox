@@ -1,0 +1,7 @@
+phone-transfer/
+.airemotecontrol/
+.vscode/
+.env
+.env.local
+node_modules/
+*.vsix

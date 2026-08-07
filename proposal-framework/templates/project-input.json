@@ -1,0 +1,22 @@
+{
+  "projectName": "",
+  "client": "",
+  "currency": "",
+  "commercialModel": "paid-discovery-then-fixed-price",
+  "targetMarginPercent": 0,
+  "contingencyPercent": 0,
+  "thirdPartyCosts": [],
+  "workPackages": [
+    {
+      "name": "Discovery",
+      "role": "solution_architect",
+      "optimisticHours": 0,
+      "likelyHours": 0,
+      "pessimisticHours": 0,
+      "assumptions": [],
+      "acceptanceCriteria": []
+    }
+  ],
+  "risks": [],
+  "openQuestions": []
+}

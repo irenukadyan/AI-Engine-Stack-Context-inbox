@@ -1,0 +1,172 @@
+{
+  "name": "ai-remote-control",
+  "displayName": "AI Engine Stack — Context Inbox",
+  "description": "Send phone context into the active VS Code workspace.",
+  "version": "0.1.5",
+  "publisher": "airemotecontrol",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onView:aiRemoteControlPairing",
+    "onCommand:aiRemoteControl.start",
+    "onCommand:aiRemoteControl.stop",
+    "onCommand:aiRemoteControl.showStatus"
+  ],
+  "main": "./extension.js",
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.0"
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aiRemoteControl",
+          "title": "AI Engine Stack",
+          "icon": "media/activity-icon.svg"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "aiRemoteControl.start",
+        "title": "AI Engine Stack: Start Context Inbox"
+      },
+      {
+        "command": "aiRemoteControl.stop",
+        "title": "AI Engine Stack: Stop Context Inbox"
+      },
+      {
+        "command": "aiRemoteControl.showStatus",
+        "title": "AI Engine Stack: Show Context Inbox status"
+      },
+      {
+        "command": "aiRemoteControl.refreshInbox",
+        "title": "AI Engine Stack: Refresh Context Inbox"
+      },
+      {
+        "command": "aiRemoteControl.markHandled",
+        "title": "AI Engine Stack: Mark inbox item handled"
+      },
+      {
+        "command": "aiRemoteControl.showPairingQr",
+        "title": "AI Engine Stack: Show phone pairing QR code",
+        "icon": "$(device-camera)"
+      },
+      {
+        "command": "aiRemoteControl.enableAutoStart",
+        "title": "AI Engine Stack: Enable automatic start for this workspace"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "aiRemoteControl.start",
+          "when": "true"
+        },
+        {
+          "command": "aiRemoteControl.stop",
+          "when": "true"
+        },
+        {
+          "command": "aiRemoteControl.showStatus",
+          "when": "true"
+        },
+        {
+          "command": "aiRemoteControl.refreshInbox",
+          "when": "true"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "aiRemoteControl.markHandled",
+          "when": "view == aiRemoteControlInbox && viewItem == aiRemoteControlInboxItem",
+          "group": "inline"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "aiRemoteControl.showPairingQr",
+          "when": "view == aiRemoteControlInbox",
+          "group": "navigation"
+        }
+      ],
+      "extension/context": [
+        {
+          "command": "aiRemoteControl.showPairingQr",
+          "when": "extension == airemotecontrol.ai-remote-control",
+          "group": "navigation"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "aiRemoteControl.start",
+        "key": "ctrl+alt+u",
+        "mac": "cmd+alt+u"
+      }
+    ],
+    "views": {
+      "aiRemoteControl": [
+        {
+          "id": "aiRemoteControlPairing",
+          "name": "Phone Pairing",
+          "type": "webview"
+        },
+        {
+          "id": "aiRemoteControlInbox",
+          "name": "AI Engine Stack Inbox"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "aiRemoteControlInbox",
+        "contents": "No mobile items yet. Send a file or note from your paired phone.\n[Start Context Inbox](command:aiRemoteControl.start)"
+      }
+    ],
+    "configuration": {
+      "title": "AI Engine Stack Context Inbox",
+      "properties": {
+        "aiRemoteControl.port": {
+          "type": "number",
+          "default": 8765,
+          "minimum": 1024,
+          "maximum": 65535,
+          "description": "Local port used by the phone companion."
+        },
+        "aiRemoteControl.maxUploadMb": {
+          "type": "number",
+          "default": 15,
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Maximum size of one incoming file."
+        },
+        "aiRemoteControl.autoStart": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Automatically start the companion when this workspace opens in VS Code. Disable it for workspaces where you do not want phone pairing available."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "node --check extension.js",
+    "package": "vsce package --out releases/ai-remote-control.vsix"
+  },
+  "keywords": [
+    "mobile",
+    "upload",
+    "remote",
+    "workspace"
+  ],
+  "license": "MIT"
+}
