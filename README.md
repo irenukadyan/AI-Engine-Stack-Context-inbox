@@ -25,16 +25,25 @@ Phone → AI Engine Stack Context Inbox → VS Code project → your coding agen
 ### Install
 
 1. Download `ai-remote-control.vsix`.
-2. Open VS Code and select the **Extensions** view.
-3. Open the `...` menu and choose **Install from VSIX...**.
-4. Select the downloaded installer and reload VS Code when asked.
+2. Open VS Code and select the **Extensions** view (the squares icon in the Activity Bar on the left).
+3. Click the `...` menu at the top of the Extensions view and choose **Install from VSIX...**.
+
+   ![The Extensions view "..." menu open, with "Install from VSIX..." at the bottom of the list](media/screenshots/install-from-vsix.png)
+
+4. Select the downloaded `ai-remote-control.vsix` file and reload VS Code when asked.
+5. Back in the Extensions view, confirm **AI Engine Stack — Context Inbox** now appears under **Installed**, alongside any other coding agent extensions you use (Claude Code, Codex, etc.).
+
+   ![The Extensions view showing AI Engine Stack — Context Inbox installed next to Claude Code and Codex](media/screenshots/extensions-installed.png)
 
 ### Send context from your phone
 
 1. Open the coding project in VS Code.
 2. On first use, a QR code opens automatically. Scan it with your phone camera.
 3. On later VS Code launches, Context Inbox starts quietly in the background. Click the **AI Engine Stack** icon in the left VS Code Activity Bar when you want to pair a phone again.
-4. In **Phone Pairing**, scan the displayed QR code with your phone camera.
+4. In **Phone Pairing**, scan the displayed QR code with your phone camera. If it is hard to read, click **Open larger QR code**.
+
+   ![The AI Engine Stack sidebar with the Phone Pairing QR code and the Context Inbox panel below it](media/screenshots/phone-pairing-qr.png)
+
 5. Choose the open VS Code project on your phone, then send a screenshot, file, PDF, or note.
 
 The item is saved automatically in your project:
