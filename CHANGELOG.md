@@ -2,6 +2,11 @@
 
 All notable changes are documented here.
 
+## 0.1.6 — Multi-file upload
+
+- The phone companion now accepts multiple selected files and delivers each one to the selected project inbox.
+- Upload progress and any per-file delivery failure are shown on the phone.
+
 ## 0.1.5 — Non-interrupting delivery
 
 - Files and notes now save quietly without automatically opening an editor or PDF viewer.

@@ -2,8 +2,16 @@
   "name": "ai-remote-control",
   "displayName": "AI Engine Stack — Context Inbox",
   "description": "Send phone context into the active VS Code workspace.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publisher": "airemotecontrol",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/irenukadyan/AI-Engine-Stack-Context-inbox.git"
+  },
+  "homepage": "https://github.com/irenukadyan/AI-Engine-Stack-Context-inbox#readme",
+  "bugs": {
+    "url": "https://github.com/irenukadyan/AI-Engine-Stack-Context-inbox/issues"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },

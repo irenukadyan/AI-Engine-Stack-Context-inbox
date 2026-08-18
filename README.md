@@ -44,7 +44,7 @@ Phone → AI Engine Stack Context Inbox → VS Code project → your coding agen
 
    ![The AI Engine Stack sidebar with the Phone Pairing QR code and the Context Inbox panel below it](media/screenshots/phone-pairing-qr.png)
 
-5. Choose the open VS Code project on your phone, then send a screenshot, file, PDF, or note.
+5. Choose the open VS Code project on your phone, then send one or more screenshots, files, PDFs, or notes.
 
 The item is saved automatically in your project:
 
@@ -63,7 +63,7 @@ Ask your coding agent:
 Read phone-transfer/INBOX.md and handle the new context.
 ```
 
-Incoming items do not interrupt your current work by opening automatically. A small VS Code notification confirms delivery; open an item yourself from **AI Engine Stack Inbox** when you are ready.
+Incoming items do not interrupt your current work by opening automatically. A small VS Code notification confirms delivery; open an item yourself from **AI Engine Stack Inbox** when you are ready. When you select multiple files, they are delivered one after another and all appear in the inbox.
 
 ## Show the QR code again
 
