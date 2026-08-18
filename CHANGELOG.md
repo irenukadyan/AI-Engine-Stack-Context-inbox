@@ -2,6 +2,10 @@
 
 All notable changes are documented here.
 
+## 0.1.7 — Multi-file fix
+
+- Restored the project selector on the phone page so multi-file uploads work correctly.
+
 ## 0.1.6 — Multi-file upload
 
 - The phone companion now accepts multiple selected files and delivers each one to the selected project inbox.
